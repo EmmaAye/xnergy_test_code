@@ -1,6 +1,10 @@
 #include <stdbool.h>
+#define uint16_t    unsigned short
+#define uint8_t     unsigned char
+#define uint32_t    unsigned int
 
-extern bool enable_cmd = false; // this should be replaced with global variable across files
+
+extern bool enable_cmd; // this should be replaced with global variable across files
 extern uint16_t CC_ref;
 extern uint16_t CV_ref;
 extern uint16_t CC_fb;
