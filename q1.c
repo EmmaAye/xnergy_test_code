@@ -42,14 +42,14 @@ void Initialization(void){
     CC_pi_ctrl.p_gain = Kp_CC;
     CC_pi_ctrl.i_gain = Ki_CC;
     CC_pi_ctrl.cumsum_err = 0
-    CC_pi_ctrl.feedback = Get_currentFB(); //Dummy function to read feedback current value
+    CC_pi_ctrl.feedback = 0x0000; //Dummy function to read feedback current value
     CC_pi_ctrl.ref = CC_ref;
 
     // initialize pi control parameters for CV
     CV_pi_ctrl.p_gain = Kp_CV;
     CV_pi_ctrl.i_gain = Ki_CV;
     CV_pi_ctrl.cumsum_err = 0
-    CV_pi_ctrl.feedback = Get_voltageFB(); // Dummy function to read feedback voltage value
+    CV_pi_ctrl.feedback = 0x0000; // Dummy function to read feedback voltage value
     CV_pi_ctrl.ref = CV_ref;
 
 }

@@ -12,14 +12,11 @@ uint32_t time_ms;
 
 uint8_t charge_status = 0x00;
 enum network_states{ INIT_STATE = 0, PRE_OPR, OPR_STATE} ;
-enum network_states network_state = 0x00;
+enum network_states network_state = INIT_STATE;
 
 uint8_t bms_timeout_cntr = 0;
 
 
-void Initialization(void){
-    network_state = INIT_STATE;
-}
 void control_routine(void){
     //run the control algorithm here
     time_ms++; //assume INT frequency is 1kHz, for timing purpose
